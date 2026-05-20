@@ -29,28 +29,17 @@ The Marketing team needs data-driven strategies to:
 Without insights from existing data, campaigns remain generic and underperform. This analysis **bridges that gap**.
 
 ---
-
-## 📌 Project Overview
-
-This project performs an end-to-end SQL analysis on a **7-table relational Instagram clone dataset**, answering both objective data questions (metrics, distributions, rankings) and subjective business questions (strategy, campaigns, retention).
-
-| Metric | Value |
-|---|---|
-| 🗄️ Total Tables Analysed | **7** |
-| ❓ Objective Questions | **10** |
-| 💡 Subjective Questions | **4** |
-| 🏷️ Top Hashtags Identified | **10** |
-| 🕖 Peak Engagement Hour | **7 PM** |
-| ⭐ Avg. Engagement Score | **63 / hour** |
-| 📊 Total Posts Analysed | **257 (peak window)** |
-
----
-
 ## 📂 Dataset Description
 
 The dataset is a relational clone of Instagram's core data model, consisting of **7 interconnected tables**:
 
 <img width="2084" height="1172" alt="image" src="https://github.com/user-attachments/assets/5f56bf9e-fac0-45a3-8c2f-4170cf39c3d3" />
+
+Dataset Scale:
+~100 users in the relational clone
+6th month, year 2025 temporal focus for engagement trends
+257 posts analyzed for peak-hour engagement
+8,782 likes & 7,488 comments measured across peak activity
 
 ---
 ## 🧹 Data Cleaning & Quality Check
