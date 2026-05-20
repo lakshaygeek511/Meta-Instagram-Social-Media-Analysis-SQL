@@ -54,24 +54,6 @@ The dataset is a relational clone of Instagram's core data model, consisting of 
 
 <img width="2084" height="1172" alt="image" src="https://github.com/user-attachments/assets/5f56bf9e-fac0-45a3-8c2f-4170cf39c3d3" />
 
-| Table | Key Columns | Description |
-|---|---|---|
-| **users** | `user_id`, `username`, `created_at` | Registered platform users |
-| **photos** | `id`, `image_url`, `user_id`, `created_at` | Posts / uploaded photos |
-| **likes** | `user_id`, `photo_id`, `created_at` | Like interactions |
-| **comments** | `id`, `comment_text`, `user_id`, `photo_id` | Comment interactions |
-| **follows** | `follower_id`, `followee_id`, `created_at` | User follow relationships |
-| **tags** | `id`, `tag_name`, `created_at` | Hashtag registry |
-| **photo_tags** | `photo_id`, `tag_id` | Many-to-many: photos ↔ tags |
-
-### 🔗 Key Relationships
-
-```
-users → photos        (1 : Many)
-photos → likes        (1 : Many)
-photos → comments     (1 : Many)
-photos ↔ tags         via photo_tags (Many : Many)
-users ↔ users         via follows (Self-referential)
 ```
 ## 🧹 Data Cleaning & Quality Check
 
