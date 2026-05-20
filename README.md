@@ -50,11 +50,9 @@ This project performs an end-to-end SQL analysis on a **7-table relational Insta
 
 The dataset is a relational clone of Instagram's core data model, consisting of **7 interconnected tables**:
 
-### 🗃️ Table Schema
-
 <img width="2084" height="1172" alt="image" src="https://github.com/user-attachments/assets/5f56bf9e-fac0-45a3-8c2f-4170cf39c3d3" />
 
-```
+---
 ## 🧹 Data Cleaning & Quality Check
 
 | Check Performed | Method | Result |
