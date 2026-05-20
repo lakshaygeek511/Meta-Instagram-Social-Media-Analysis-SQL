@@ -35,11 +35,14 @@ The dataset is a relational clone of Instagram's core data model, consisting of 
 
 <img width="2084" height="1172" alt="image" src="https://github.com/user-attachments/assets/5f56bf9e-fac0-45a3-8c2f-4170cf39c3d3" />
 
-Dataset Scale:
-~100 users in the relational clone
-6th month, year 2025 temporal focus for engagement trends
-257 posts analyzed for peak-hour engagement
-8,782 likes & 7,488 comments measured across peak activity
+| Metric | Value |
+|---|---|
+| 🗄️ Total Tables Analysed | **7** |
+| 👍 Total Likes | **8,782** |
+| ＠ Total Comments | **7,488** |
+| 🕖 Peak Engagement Hour | **7 PM** |
+| ⭐ Avg. Engagement Score | **63 / hour** |
+| 📊 Total Posts Analysed | **257 (peak window)** |
 
 ---
 ## 🧹 Data Cleaning & Quality Check
@@ -77,6 +80,8 @@ Dataset Scale:
 
 ### Q2 — User Activity Distribution (Posts, Likes, Comments)
 > **Approach:** `LEFT JOIN` across `users → photos`, `likes`, `comments`. `COUNT(DISTINCT)` per metric.
+
+<img width="2080" height="1168" alt="image" src="https://github.com/user-attachments/assets/c1101941-623b-4f2c-8e5f-a330fa5be550" />
 
 **Key Insight:**
 - Top **10%** of users generate ~**60%** of all posts & engagement — a classic Pareto distribution.
@@ -141,6 +146,8 @@ Dataset Scale:
 
 ### Q10 — Top Hashtags by Average Likes
 > **Approach:** `Likes_Count` CTE → `JOIN tags → photo_tags → Likes_Count` → `AVG(LikesCount)` per tag → `ORDER BY Avg_likes DESC`.
+
+<img width="2076" height="1158" alt="image" src="https://github.com/user-attachments/assets/8aa9ddd5-9013-4a3f-a5ef-4d96317af46e" />
 
 **Key Insight:**
 
