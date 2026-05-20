@@ -9,7 +9,7 @@
 
 # 📸 Social Media Analysis — Meta · Instagram Clone
 
-### A comprehensive SQL-driven analysis of a relational Instagram clone dataset to uncover actionable marketing insights on user engagement, retention, content strategy & campaign targeting.
+### A comprehensive SQL-driven analysis of a Instagram clone dataset to uncover actionable marketing insights on user engagement, retention, content strategy & campaign targeting.
 
 ---
 
@@ -52,6 +52,8 @@ The dataset is a relational clone of Instagram's core data model, consisting of 
 
 ### 🗃️ Table Schema
 
+<img width="2084" height="1172" alt="image" src="https://github.com/user-attachments/assets/5f56bf9e-fac0-45a3-8c2f-4170cf39c3d3" />
+
 | Table | Key Columns | Description |
 |---|---|---|
 | **users** | `user_id`, `username`, `created_at` | Registered platform users |
@@ -71,40 +73,6 @@ photos → comments     (1 : Many)
 photos ↔ tags         via photo_tags (Many : Many)
 users ↔ users         via follows (Self-referential)
 ```
-
-### 📐 Entity Relationship Diagram (ERD)
-
-```
-┌─────────┐      ┌─────────┐      ┌────────┐
-│  USERS  │─────▶│ PHOTOS  │─────▶│ LIKES  │
-│user_id  │      │id       │      │user_id │
-│username │      │image_url│      │photo_id│
-│created  │      │user_id  │      └────────┘
-└─────────┘      │created  │
-     │           └────┬────┘      ┌──────────┐
-     │                │──────────▶│ COMMENTS │
-     │           ┌────▼─────┐     │comment   │
-     │           │PHOTO_TAGS│     │user_id   │
-     │           │photo_id  │     │photo_id  │
-     │           │tag_id    │     └──────────┘
-     │           └────┬─────┘
-     │           ┌────▼────┐
-     │           │  TAGS   │
-     │           │id       │
-     │           │tag_name │
-     │           └─────────┘
-     │
-     ▼
-┌─────────┐
-│ FOLLOWS │
-│follower │
-│followee │
-│created  │
-└─────────┘
-```
-
----
-
 ## 🧹 Data Cleaning & Quality Check
 
 | Check Performed | Method | Result |
